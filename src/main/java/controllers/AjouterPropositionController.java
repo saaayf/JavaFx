@@ -1,17 +1,31 @@
 package controllers;
 
+import impl.org.controlsfx.skin.AutoCompletePopup;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import models.Projet;
 import models.Proposition;
+import models.PropositionSuggestion;
 import services.ServiceProposition;
+import services.VertexAIService;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.List;
+import java.util.Map;
+import java.util.ResourceBundle;
 
-public class AjouterPropositionController {
+
+
+
+
+public class AjouterPropositionController implements Initializable {
     private Projet projet;
     @javafx.fxml.FXML
     private TextArea tfDesc;
@@ -30,9 +44,75 @@ public class AjouterPropositionController {
 
     private ServiceProposition serviceProposition = new ServiceProposition();
 
+    private  Map<String,String> suggestionMap = null;
+
+    List<PropositionSuggestion> suggestions = null;
+
+    ObservableList<String> suggestionTitles = null;
+
 
     public void setProjet(Projet projet) {
         this.projet = projet;
+        tfDesc.setWrapText(true);
+
+        try {
+            this.suggestionMap = VertexAIService.getSuggestions(projet.getTitre(),projet.getCompetences());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        // show the map
+        System.out.println(suggestionMap);
+        // convert the map<string;string> to a list of PropositionSuggestion
+         this.suggestions = suggestionMap.entrySet().stream()
+                .map(entry -> new PropositionSuggestion(entry.getKey(), entry.getValue()))
+                .toList();
+        ObservableList<PropositionSuggestion> ObsSuggestion  = FXCollections.observableArrayList(suggestions);
+
+
+
+        AutoCompletePopup<PropositionSuggestion> popup = new AutoCompletePopup<>();
+        popup.getSuggestions().addAll(ObsSuggestion);
+        // Listen for changes in the TextField
+        tfDesc.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.isEmpty()) {
+                // Filter suggestions based on current text
+                List<PropositionSuggestion> filteredSuggestions = this.suggestions.stream()
+                        .filter(suggestion -> suggestion.getTitle().toLowerCase().contains(newValue.toLowerCase()))
+                        .toList();
+                // Update popup content with filtered suggestions
+                if(filteredSuggestions.size() > 0) {
+                    popup.getSuggestions().setAll(filteredSuggestions);
+
+                }
+                else
+                {
+                    popup.getSuggestions().setAll(filteredSuggestions);
+
+                }
+                tfDesc.setOnKeyPressed(event -> popup.show(tfDesc));
+            }
+            else
+            {
+                popup.getSuggestions().setAll(this.suggestions);
+                tfDesc.setOnKeyPressed(event -> popup.show(tfDesc));
+            }
+
+        });
+
+        popup.setOnSuggestion(suggestion -> {
+            // Set the TextField text to the selected suggestion description
+            tfDesc.setText(suggestion.getSuggestion().getDescription());
+            // Hide the popup
+            popup.hide();
+        });
+
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 
     @javafx.fxml.FXML
@@ -89,4 +169,6 @@ public class AjouterPropositionController {
         controller.setProjet(projet);
         BtnAjouter.getScene().setRoot(root);
     }
+
+
 }
