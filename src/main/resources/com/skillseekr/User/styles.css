@@ -1,0 +1,111 @@
+/* Styles pour l'en-tête des colonnes */
+.table-view .column-header {
+    -fx-text-fill: white;
+    -fx-background-color: rgba(10, 10, 66, 0.72);
+}
+
+/* Styles pour la table */
+.table-view {
+    -fx-background-color: #f0f0f0;
+    -fx-font-size: 14px;
+}
+
+/* Styles pour le texte dans l'en-tête des colonnes */
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-pref-height: 40px;
+}
+
+.table-view {
+    -fx-padding: 0px 0px -1px -1px; /* Valeurs négatives pour les côtés droit et bas */
+}
+
+/* Styles pour l'icône de suppression */
+.delete-icon {
+    -fx-cursor: hand;
+    -glyph-size: 25px;
+    -fx-fill: #ff1744;
+}
+
+/* Styles pour l'icône d'édition */
+.edit-icon {
+    -fx-cursor: hand;
+    -glyph-size: 25px;
+    -fx-fill: #00E676;
+}
+
+/* Styles pour toutes les lignes de la table */
+.table-row-cell {
+    -fx-text-fill: #333333;
+    -fx-background-color: #ffffff; /* Blanc */
+}
+
+/* Styles pour les lignes sélectionnées */
+.table-row-cell:selected {
+    -fx-background-color: #e0e0e0; /* Même couleur de fond que le tableau */
+}
+
+
+.table-row-cell:empty {
+    -fx-background-color: #ffffff;
+}
+/*
+.table-view .table-cell {
+    -fx-alignment: center;
+}
+*/
+#usersButton {
+    -fx-background-color: #ffffff; /* Couleur de base */
+}
+
+#usersButton:pressed {
+    -fx-background-color: #bfadf8; /* Couleur lorsqu'il est cliqué */
+}
+
+
+/* login */
+.label-text {
+    -fx-text-fill: #110b2e;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 20px;
+}
+
+/* Back */
+
+#AnchorPane .vbox-style {
+    -fx-background-radius: 20 20 0 0; /* Coins arrondis en haut */
+}
+
+
+
+/*
+.head-background {
+    -fx-background-color: linear-gradient(to left, #795AF3, #3929E0);
+}
+ */
+
+/* edit profile */
+/* Style de la classe hbox-nav */
+.hbox-nav {
+    -fx-padding: 5px 0; /* Ajustez le padding selon vos besoins */
+    -fx-border-width: 0 0 1 0; /* Bordure basse seulement */
+    -fx-border-color: rgba(10, 104, 246, 0.87); /* Couleur de la bordure */
+}
+
+
+/* Style des boutons dans la classe hbox-nav lorsqu'ils sont en état 'armed' ou 'pressed' */
+
+.hbox-nav .button:armed,
+.hbox-nav .button:pressed {
+    -fx-background-color: #FFFFFF !important; /* Fond blanc au clic */
+}
+
+
+/* styles.css */
+.header-label {
+    -fx-text-fill: blue;
+    -fx-font-size: 24px; /* Optionnel : ajustez la taille de la police si nécessaire */
+}
+

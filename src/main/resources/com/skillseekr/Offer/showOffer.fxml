@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="571.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.skillseekr.Offer.showOffer">
+    <children>
+      <VBox layoutY="38.0" prefHeight="399.0" prefWidth="1030.0">
+         <children>
+              <ScrollPane prefHeight="305.0" prefWidth="881.0" vbarPolicy="NEVER">
+                  <content>
+                      <TableView fx:id="offerTableView" prefHeight="299.0" prefWidth="1411.0" stylesheets="@../styles.css">
+                          <columns>
+                              <TableColumn fx:id="idColumn" prefWidth="0.0" text="ID" visible="false" />
+                              <TableColumn fx:id="titleColumn" prefWidth="150.0" text="Title" />
+                              <TableColumn fx:id="descriptionColumn" prefWidth="200.0" text="Description" />
+                              <TableColumn fx:id="authorColumn" prefWidth="100.0" text="Author" />
+                              <TableColumn fx:id="createdAtColumn" prefWidth="150.0" text="Created At" />
+                              <TableColumn fx:id="motiveColumn" prefWidth="100.0" text="Motive" />
+                              <TableColumn fx:id="typeColumn" prefWidth="100.0" text="Type" />
+                              <TableColumn fx:id="locationColumn" prefWidth="100.0" text="Location" />
+                              <TableColumn fx:id="statusColumn" prefWidth="100.0" text="Status" />
+                              <TableColumn fx:id="skillsColumn" prefWidth="100.0" text="Skills" />
+                              <TableColumn fx:id="fileNameColumn" prefWidth="100.0" text="File Name" />
+                              <TableColumn fx:id="actionColumn" prefWidth="195.0" text="Action" />
+                          </columns>
+                          <contextMenu>
+                              <ContextMenu fx:id="contextMenu">
+                                  <items>
+                                      <MenuItem onAction="#deleteSelectedOffer" text="Delete Offer" />
+                                  </items>
+                              </ContextMenu>
+                          </contextMenu>
+                      </TableView>
+                  </content>
+              </ScrollPane>
+            <Pagination fx:id="pagination" prefHeight="58.0" prefWidth="432.0" stylesheets="@../styles.css" />
+         </children>
+      </VBox>
+        <Button fx:id="exportButton" layoutX="378.0" layoutY="417.0" mnemonicParsing="false" stylesheets="@../styles.css" text="Export Table as a Spreadsheet" onAction="#exportTable">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="540.0" prefWidth="531.0" style="-fx-background-color: #ADD8E6;" stylesheets="@form.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.skillseekr.Offer.applyOffer">
+
+    <!-- Main VBox -->
+    <VBox alignment="CENTER" spacing="10" stylesheets="@form.css">
+
+        <!-- Dropdown menus with labels -->
+        <!-- Add your dropdown menus here -->
+
+    </VBox>
+
+    <!-- Image -->
+    <ImageView fitHeight="121.0" fitWidth="120.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/SSBlack.png" />
+        </image>
+    </ImageView>
+
+    <!-- Form Inputs -->
+    <TextField fx:id="authorEmailField" layoutX="165.0" layoutY="160.0" prefHeight="33.0" prefWidth="270.0" promptText="Enter Offer AuthorEmail Address" styleClass="text-field" stylesheets="@form.css" />
+    <TextField fx:id="subjectField" layoutX="166.0" layoutY="202.0" prefHeight="30.0" prefWidth="267.0" promptText="Enter The Subject of you job Application" styleClass="text-field" stylesheets="@form.css" />
+    <TextArea fx:id="applicationRequestArea" layoutX="166.0" layoutY="242.0" prefHeight="190.0" prefWidth="268.0" promptText="Enter you SS Application Request" styleClass="text-area" stylesheets="@form.css" />
+
+    <!-- Title -->
+    <Label layoutX="105.0" layoutY="88.0" prefHeight="29.0" prefWidth="404.0" styleClass="label-title" stylesheets="@form.css" text="SkillSeekr Offer Application Form" />
+    <Button id="sendButton" layoutX="163.0" layoutY="461.0" onAction="#handleSendButtonAction" prefHeight="30.0" prefWidth="274.0" styleClass="dark-blue-button" stylesheets="@form.css" text="Send Offer Application" />
+    <!-- Add a Label for displaying the selected file name -->
+    <HBox spacing="10" stylesheets="@form.css" />
+
+</AnchorPane>

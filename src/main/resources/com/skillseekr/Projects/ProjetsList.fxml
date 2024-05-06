@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.skillseekr.Projects.ProjetsListController">
+   <children>
+      <ListView fx:id="ListProjets" layoutX="40.0" layoutY="159.0" onMouseClicked="#OnMouseClicked" prefHeight="356.0" prefWidth="676.0" />
+      <Label layoutX="265.0" layoutY="14.0" prefHeight="49.0" prefWidth="254.0" text="Liste des projets">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="SearchField" layoutX="69.0" layoutY="78.0" prefHeight="57.0" prefWidth="213.0" promptText="Recherche">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="ComboBudget" layoutX="556.0" layoutY="77.0" prefHeight="58.0" prefWidth="159.0" promptText="Filtrer par budget" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="752.0" prefWidth="1271.0" style="-fx-background-color: #fff;" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.skillseekr.User.Back">
+    <children>
+        <Pane layoutX="-5.0" layoutY="-9.0" prefHeight="313.0" prefWidth="1279.0" style="-fx-background-color: #4490de;" styleClass="sidebar" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-3.3149608796775283" AnchorPane.topAnchor="-9.0">
+            <children>
+                <Text fill="#9dceee" layoutX="335.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SKILLSEEKR ">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="417.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/ Offer Space">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="335.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SkillSeekr Users and Access">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Text>
+                <Label layoutX="332.0" layoutY="98.0" styleClass="label-style" text="Manage Users" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Label>
+                <Button fx:id="AddUser" layoutX="335.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="52.0" prefWidth="194.0" text="Add SS User">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+
+                      <HBox  layoutX="1064.0" layoutY="28.0" spacing="10.0">
+               <HBox fx:id="Profile" onMouseClicked="#handleProfile" prefHeight="21.0" prefWidth="89.0">
+                  <children>
+         
+                      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile">
+                              <font>
+                                  <Font name="Arial Bold" size="18.0" />
+                              </font>
+                          </Text>
+                  </children>
+               </HBox>
+                          <HBox fx:id="logout" onMouseClicked="#handleLogout" prefHeight="21.0" prefWidth="108.0">
+                              <children>
+                                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Log Out">
+                                      <font>
+                                          <Font name="Arial Bold" size="18.0" />
+                                      </font>
+                                  </Text>
+                              </children>
+                          </HBox>
+                </HBox>
+
+            </children></Pane>
+        <VBox layoutX="30.0" layoutY="-13.0" prefHeight="637.0" prefWidth="269.0" scaleX="0.89" scaleY="0.89" scaleZ="0.91" style="-fx-background-color: #fff;" styleClass="vbox-style" AnchorPane.bottomAnchor="-1.0" AnchorPane.topAnchor="-13.0">
+            <children>
+
+                <ImageView fitHeight="174.0" fitWidth="144.0">
+                    <image>
+                        <Image url="@../images/icon.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="3.0" left="65.0" top="20.0" />
+                    </VBox.margin>
+                </ImageView>
+
+                <HBox id="UsersButton" spacing="5.0">
+                    <FontAwesomeIcon fill="#172bc270" glyphName="USER" size="19" wrappingWidth="13.980731010437012">
+                        <HBox.margin>
+                            <Insets left="41.0" top="13.0" />
+                        </HBox.margin></FontAwesomeIcon>
+                    <JFXButton onMouseClicked="#handleUsersButtonClick" prefHeight="43.0" prefWidth="99.0" ripplerFill="#ffffff" text="Users">
+
+                        <font>
+                            <Font size="20.0" />
+                        </font>
+                        <padding>
+                            <Insets left="10.0" />
+                        </padding>
+                        <HBox.margin>
+                            <Insets left="-1.0" />
+                        </HBox.margin>
+                    </JFXButton>
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+        <AnchorPane fx:id="contentPane" layoutX="297.0" layoutY="249.0" prefHeight="439.0" prefWidth="726.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,121 @@
+.root {
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.label-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-background-color: #fff;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.0, 0, 0);
+    -fx-transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text-field:focused {
+    -fx-background-color: #f2f2f2;
+}
+
+.text-area {
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-background-color: #fff;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.0, 0, 0);
+    -fx-transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text-area:focused {
+    -fx-background-color: #f2f2f2;
+}
+
+.combo-box {
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-background-color: #fff;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.0, 0, 0);
+    -fx-transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.combo-box:focused {
+    -fx-background-color: #f2f2f2;
+}
+
+.dark-blue-button {
+    -fx-font-size: 14px;
+    -fx-padding: 5px 15px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #4490de;
+    -fx-border-width: 1px;
+    -fx-background-color: #4490de;
+    -fx-text-fill: #fff;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.0, 0, 0);
+    -fx-transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-blue-button:hover {
+    -fx-background-color: #397eba;
+}
+
+.green-button {
+    -fx-font-size: 14px;
+    -fx-padding: 5px 15px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #00b783;
+    -fx-border-width: 1px;
+    -fx-background-color: #00b783;
+    -fx-text-fill: #fff;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.0, 0, 0);
+    -fx-transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.green-button:hover {
+    -fx-background-color: #00a675;
+}
+
+.red-button {
+    -fx-font-size: 14px;
+    -fx-padding: 5px 15px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #f32d2d;
+    -fx-border-width: 1px;
+    -fx-background-color: #f32d2d;
+    -fx-text-fill: #fff;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.0, 0, 0);
+    -fx-transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.red-button:hover {
+    -fx-background-color: #d92626;
+}
+
+.radio-button {
+    -fx-font-size: 14px;
+}
+#btnDesc {
+    -fx-background-color: #2196f3; /* Blue background color */
+    -fx-text-fill: white; /* White text color */
+}
+
+#btnDesc:hover {
+    -fx-background-color: #1976d2; /* Darker blue background color on hover */
+}
+#btnApply {
+    -fx-background-color: #ad7df8; /* Blue background color */
+    -fx-text-fill: white; /* White text color */
+}
+
+#btnApply:hover {
+    -fx-background-color: #894afa; /* Darker blue background color on hover */
+}

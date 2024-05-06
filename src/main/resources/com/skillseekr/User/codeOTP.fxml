@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="codeOTPPane" prefHeight="524.0" prefWidth="684.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.skillseekr.User.codeOTP">
+    <VBox layoutX="92.0" layoutY="82.0" prefHeight="369.0" prefWidth="510.0" style="-fx-background-color: #FDFDFD; -fx-background-radius: 25; -fx-alignment: CENTER;">
+        <!-- Ajout de l'image -->
+        <ImageView fitHeight="104.0" fitWidth="101.0">
+            <image>
+                <Image url="@images/logo-security.png" />
+            </image>
+            <VBox.margin>
+                <Insets left="2.0" top="-25.0" />
+            </VBox.margin>
+        </ImageView>
+        <Text style="-fx-padding: 30;" text="Code Verification" textAlignment="CENTER" wrappingWidth="168.6123046875">
+            <VBox.margin>
+                <Insets left="11.0" top="23.0" />
+            </VBox.margin>
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+
+        <HBox spacing="5">
+            <TextField fx:id="digit1" prefHeight="33.0" prefWidth="40" />
+            <TextField fx:id="digit2" prefHeight="33.0" prefWidth="40">
+            <HBox.margin>
+               <Insets left="5.0" />
+            </HBox.margin></TextField>
+            <TextField fx:id="digit3" prefHeight="33.0" prefWidth="40">
+            <HBox.margin>
+               <Insets left="5.0" />
+            </HBox.margin></TextField>
+            <TextField fx:id="digit4" prefHeight="33.0" prefWidth="40">
+            <HBox.margin>
+               <Insets left="5.0" />
+            </HBox.margin></TextField>
+            <TextField fx:id="digit5" prefHeight="33.0" prefWidth="40">
+            <HBox.margin>
+               <Insets left="5.0" />
+            </HBox.margin></TextField>
+            <TextField fx:id="digit6" prefHeight="33.0" prefWidth="40">
+            <HBox.margin>
+               <Insets left="5.0" />
+            </HBox.margin></TextField>
+         <VBox.margin>
+            <Insets left="107.0" top="33.0" />
+         </VBox.margin>
+        </HBox>
+        <Button onMouseClicked="#verifyOTPButtonClicked" prefHeight="43.0" prefWidth="295.0" style="-fx-border-radius: 20; -fx-background-color: #80B3FF; -fx-font-family: Serif; -fx-font-size: 20;" text="Verify" textFill="WHITE">
+         <VBox.margin>
+            <Insets left="-2.0" top="37.0" />
+         </VBox.margin></Button>
+    </VBox>
+</Pane>

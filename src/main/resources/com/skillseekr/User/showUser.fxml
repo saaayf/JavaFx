@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="435.0" prefWidth="1073.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.skillseekr.User.showUser">
+   <children>
+      <TableView fx:id="tableView" layoutX="36.0" layoutY="103.0" prefHeight="278.0" prefWidth="975.0" stylesheets="@styles.css">
+        <columns>
+          <TableColumn fx:id="usernameCol" prefWidth="195.0" text="Username" />
+          <TableColumn fx:id="emailCol" prefWidth="195.0" text="Email" />
+            <TableColumn fx:id="roleCol" prefWidth="195.0" text="Role" />
+            <TableColumn fx:id="verificationCol" prefWidth="195.0" text="Verification" />
+            <TableColumn fx:id="actionCol" prefWidth="195.0" text="Actions" />
+        </columns>
+      </TableView>
+      <Label layoutX="5.0" layoutY="47.0" styleClass="label-style" text="Manage Users" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

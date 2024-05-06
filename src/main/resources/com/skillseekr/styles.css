@@ -1,0 +1,128 @@
+/* Styles pour l'en-tête des colonnes */
+.table-view .column-header {
+    -fx-text-fill: white;
+    -fx-background-color: rgba(10, 10, 66, 0.72);
+}
+
+/* Styles pour la table */
+.table-view {
+    -fx-background-color: #f0f0f0;
+    -fx-font-size: 14px;
+}
+
+/* Styles pour le texte dans l'en-tête des colonnes */
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-pref-height: 40px;
+}
+
+.table-view {
+    -fx-padding: 0px 0px -1px -1px; /* Valeurs négatives pour les côtés droit et bas */
+}
+
+/* Styles pour l'icône de suppression */
+/* Edit button */
+.edit-button {
+    -fx-background-color: #00E676;
+    -fx-text-fill: white;
+}
+
+/* Delete button */
+.delete-button {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+/* Styles pour toutes les lignes de la table */
+.table-row-cell {
+    -fx-text-fill: #333333;
+    -fx-background-color: #ffffff; /* Blanc */
+}
+
+/* Styles pour les lignes sélectionnées */
+.table-row-cell:selected {
+    -fx-background-color: #e0e0e0; /* Même couleur de fond que le tableau */
+}
+
+
+.table-row-cell:empty {
+    -fx-background-color: #ffffff;
+}
+/*
+.table-view .table-cell {
+    -fx-alignment: center;
+}
+*/
+#usersButton {
+    -fx-background-color: #ffffff; /* Couleur de base */
+}
+
+#usersButton:pressed {
+    -fx-background-color: #bfadf8; /* Couleur lorsqu'il est cliqué */
+}
+
+
+/* login */
+.label-text {
+    -fx-text-fill: #110b2e;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 20px;
+}
+
+/* Back */
+
+#AnchorPane .vbox-style {
+    -fx-background-radius: 20 20 0 0; /* Coins arrondis en haut */
+}
+
+/* Styles for the pagination control */
+
+
+.pagination .page-button {
+    -fx-background-color: #2196f3; /* Blue background color */
+    -fx-text-fill: white; /* White text color */
+}
+
+.pagination .page-button:hover {
+    -fx-background-color: #1976d2; /* Darker blue background color on hover */
+}
+
+.pagination .current-page {
+    -fx-background-color: #1976d2; /* Darker blue background color for the current page */
+    -fx-text-fill: white; /* White text color */
+}
+/* Styles for the export button */
+#exportButton {
+    -fx-background-color: #2196f3; /* Blue background color */
+    -fx-text-fill: white; /* White text color */
+}
+
+#exportButton:hover {
+    -fx-background-color: #1976d2; /* Darker blue background color on hover */
+}
+#AddOffer {
+    -fx-background-color: #004f8f; /* Blue background color */
+    -fx-text-fill: white; /* White text color */
+}
+
+#AddOffer:hover {
+    -fx-background-color: #0f61b0; /* Darker blue background color on hover */
+}
+#BrowseOffer {
+    -fx-background-color: #7e33ff; /* Blue background color */
+    -fx-text-fill: white; /* White text color */
+}
+
+#BrowseOffer:hover {
+    -fx-background-color: #965efa; /* Darker blue background color on hover */
+}
+#AddUser {
+    -fx-background-color: #004f8f; /* Blue background color */
+    -fx-text-fill: white; /* White text color */
+}
+
+#AddUser:hover {
+    -fx-background-color: #0f61b0; /* Darker blue background color on hover */
+}

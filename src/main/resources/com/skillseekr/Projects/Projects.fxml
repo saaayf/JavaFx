@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="623.0" prefWidth="1271.0" style="-fx-background-color: #fff;" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.skillseekr.Projects.ProjectController">
+    <children>
+        <Pane layoutX="-8.0" prefHeight="313.0" prefWidth="1279.0" style="-fx-background-color: #4490de;" styleClass="sidebar" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Text fill="#9dceee" layoutX="335.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SKILLSEEKR ">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="417.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/ Projects">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="335.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projects and Preposition">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Text>
+
+                <HBox layoutX="1064.0" layoutY="28.0" spacing="10.0">
+                    <HBox fx:id="Profile" onMouseClicked="#handleProfile" prefHeight="21.0" prefWidth="89.0" />
+                    <HBox fx:id="logout" onMouseClicked="#handleLogout" prefHeight="21.0" prefWidth="108.0" />
+                </HBox>
+
+            </children></Pane>
+        <VBox layoutX="30.0" layoutY="-13.0" prefHeight="637.0" prefWidth="269.0" scaleX="0.89" scaleY="0.89" scaleZ="0.91" style="-fx-background-color: #fff;" styleClass="vbox-style" AnchorPane.bottomAnchor="-1.0" AnchorPane.topAnchor="-13.0">
+            <children>
+
+                <ImageView fitHeight="174.0" fitWidth="144.0">
+                    <image>
+                        <Image url="@../images/icon.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="3.0" left="65.0" top="20.0" />
+                    </VBox.margin>
+                </ImageView>
+
+                <HBox id="usersButton" spacing="10.0">
+                    <FontAwesomeIcon fill="#172bc270" glyphName="USERS" size="19" wrappingWidth="13.980731010437012">
+                        <HBox.margin>
+                            <Insets left="41.0" top="13.0" />
+                        </HBox.margin></FontAwesomeIcon>
+                    <JFXButton onMouseClicked="#handleUsersButtonClick" prefHeight="43.0" prefWidth="99.0" ripplerFill="#ffffff" text="Projets">
+                        <font>
+                            <Font size="20.0" />
+                        </font>
+                        <padding>
+                            <Insets left="10.0" />
+                        </padding>
+                        <HBox.margin>
+                            <Insets left="-1.0" />
+                        </HBox.margin>
+                    </JFXButton>
+                    <VBox.margin>
+                        <Insets top="26.0" />
+                    </VBox.margin>
+                </HBox>
+
+                <HBox fx:id="BtnMesProjets" spacing="10.0">
+                    <FontAwesomeIcon fill="#172bc270" glyphName="BRIEFCASE" size="19" wrappingWidth="13.980731010437012">
+                        <HBox.margin>
+                            <Insets left="41.0" top="13.0" />
+                        </HBox.margin></FontAwesomeIcon>
+                    <JFXButton onMouseClicked="#GoMesProjets" prefHeight="43.0" prefWidth="99.0" ripplerFill="#ffffff" text="Mes projets">
+                        <font>
+                            <Font size="20.0" />
+                        </font>
+                        <padding>
+                            <Insets left="10.0" />
+                        </padding>
+                        <HBox.margin>
+                            <Insets left="-1.0" />
+                        </HBox.margin>
+                    </JFXButton>
+                    <VBox.margin>
+                        <Insets top="11.0" />
+                    </VBox.margin>
+                </HBox>
+
+                <HBox fx:id="HomeButton" spacing="10.0">
+                    <FontAwesomeIcon fill="#172bc270" glyphName="TABLE" size="19" wrappingWidth="13.980731010437012">
+                        <HBox.margin>
+                            <Insets left="41.0" top="13.0" />
+                        </HBox.margin></FontAwesomeIcon>
+                    <JFXButton onMouseClicked="#GoHome" prefHeight="43.0" prefWidth="137.0" ripplerFill="#ffffff" text="Home">
+                        <font>
+                            <Font size="20.0" />
+                        </font>
+                        <padding>
+                            <Insets left="10.0" />
+                        </padding>
+                        <HBox.margin>
+                            <Insets left="8.0" />
+                        </HBox.margin>
+                    </JFXButton>
+                    <VBox.margin>
+                        <Insets top="11.0" />
+                    </VBox.margin>
+                </HBox>
+
+                <HBox id="reponseButton" spacing="10.0">
+                    <FontAwesomeIcon fill="#172bc270" glyphName="COMMENT" size="19" wrappingWidth="13.980731010437012">
+                        <HBox.margin>
+                            <Insets left="41.0" top="13.0" />
+                        </HBox.margin></FontAwesomeIcon>
+                    <JFXButton prefHeight="43.0" prefWidth="99.0" ripplerFill="#ffffff" text="Reponse">
+                        <font>
+                            <Font size="20.0" />
+                        </font>
+                        <padding>
+                            <Insets left="10.0" />
+                        </padding>
+                        <HBox.margin>
+                            <Insets left="8.0" />
+                        </HBox.margin>
+                    </JFXButton>
+                    <VBox.margin>
+                        <Insets top="11.0" />
+                    </VBox.margin>
+                </HBox>
+
+                <HBox id="entretienButton" spacing="10.0">
+                    <FontAwesomeIcon fill="#172bc270" glyphName="CALENDAR_ALT" size="19" wrappingWidth="13.980731010437012">
+                        <HBox.margin>
+                            <Insets left="41.0" top="13.0" />
+                        </HBox.margin></FontAwesomeIcon>
+                    <JFXButton prefHeight="43.0" prefWidth="99.0" ripplerFill="#ffffff" text="Entretien">
+                        <font>
+                            <Font size="20.0" />
+                        </font>
+                        <padding>
+                            <Insets left="10.0" />
+                        </padding>
+                        <HBox.margin>
+                            <Insets left="7.0" />
+                        </HBox.margin>
+                    </JFXButton>
+                    <VBox.margin>
+                        <Insets top="11.0" />
+                    </VBox.margin>
+                </HBox>
+
+
+            </children>
+        </VBox>
+        <AnchorPane fx:id="contentPane" layoutX="300.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" />
+    </children>
+</AnchorPane>

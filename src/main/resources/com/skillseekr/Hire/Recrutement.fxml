@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.skillseekr.Hire.RecrutementController">
+    <children>
+        <Pane prefHeight="173.0" prefWidth="980.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label layoutX="130.0" layoutY="44.0" text="RECUTEMENT" textFill="WHITE">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+                <Label layoutX="136.0" layoutY="105.0" text="Recruitement and Interview Process " textFill="WHITE">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/SSWhite.png" />
+                    </image>
+                </ImageView>
+                <Pane layoutX="4.0" layoutY="-3.0" prefHeight="165.0" prefWidth="1022.0" style="-fx-background-color: #2D75E8;">
+                    <children>
+                        <Label layoutX="130.0" layoutY="44.0" text="RECUTEMENT" textFill="WHITE">
+                            <font>
+                                <Font size="48.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="136.0" layoutY="105.0" text="Recruitement and Interview Process " textFill="WHITE">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/SSWhite.png" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="searchField" layoutX="424.0" layoutY="131.0" onAction="#searchRecrutement" promptText="Keywords.." />
+                        <Label layoutX="358.0" layoutY="135.0" prefHeight="17.0" prefWidth="90.0" text="Search " />
+
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        <Pane layoutY="164.0" prefHeight="399.0" prefWidth="283.0" style="-fx-background-color: #2D75E8;">
+            <children>
+                <VBox layoutX="48.0" layoutY="14.0" prefHeight="381.0" prefWidth="200.0">
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="221.0" text="Manage your SS Hires" textFill="WHITE">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="id" disable="true" prefHeight="30.0" prefWidth="255.0" text="Id" />
+                        <TextField fx:id="titre" layoutX="10.0" layoutY="46.0" prefHeight="30.0" prefWidth="246.0" text="Titre" />
+                        <TextField fx:id="description" layoutX="10.0" layoutY="76.0" prefHeight="30.0" prefWidth="246.0" text="Description" />
+                        <TextField fx:id="statut" layoutX="10.0" layoutY="137.0" prefHeight="30.0" prefWidth="246.0" text="Statut" />
+                        <DatePicker fx:id="date" prefHeight="26.0" prefWidth="229.0" promptText="Date" />
+                        <Button mnemonicParsing="false" onAction="#AddRecrutement" prefHeight="26.0" prefWidth="89.0" styleClass="sale" stylesheets="@../style.css" text="Save">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#UpdateRecrutement" prefHeight="26.0" prefWidth="89.0" styleClass="sale" stylesheets="@../style.css" text="Update">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="50.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#DeleteRecrutement" prefHeight="26.0" prefWidth="89.0" styleClass="sale" stylesheets="@../style.css" text="Delete">
+                            <VBox.margin>
+                                <Insets left="50.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
+        <TableView fx:id="recruTableView" editable="true" layoutX="283.0" layoutY="165.0" prefHeight="399.0" prefWidth="746.0" styleClass="table-viewwassim" stylesheets="@../style.css">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="68.79995727539062" text="Id" />
+                <TableColumn fx:id="titreColumn" prefWidth="112.800048828125" text="         Titre" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="279.20001220703125" text="                              Description" />
+                <TableColumn fx:id="statutColumn" prefWidth="126.39996337890625" text="        Staut" />
+                <TableColumn fx:id="dateColumn" prefWidth="154.39996337890625" text="                  Date" />
+            </columns>
+            <padding>
+                <Insets top="10.0" />
+            </padding>
+        </TableView>
+
+
+    </children>
+
+</AnchorPane>
